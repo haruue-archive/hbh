@@ -1,8 +1,11 @@
 <!--pages/personnel/personnel.wxml-->
 <view class="page-top">
-  <image src='../../images/personal/header.jpg' class='image-top'></image>
-  <text class='nickname-text'>{{Nickname}}</text>
-  <image src="{{sex=='0'?'../../images/icon/male.ico':'../../images/icon/female.ico'}}" class='image-sex'></image>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image src="{{userInfo.avatarUrl}}" class='image-top'></image>
+    <text class='nickname-text'>{{userInfo.nickName}}</text>
+    <image src="{{userInfo.gender=='0'?'../../images/icon/locked.png':userInfo.gender=='1'?'../../images/icon/male.png':'../../images/icon/female.png'}}" class='image-sex' mode='aspectFit'></image>
+  </block>
 </view>
 
 <view class="bg">
