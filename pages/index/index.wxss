@@ -16,3 +16,48 @@
   opacity: 0.2;
   margin-top:10px; 
 }
+.toolbar {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  flex-direction:row;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+.toolbar-widget {
+  float: left;
+  margin: 7px;
+  padding: 3px 10px;
+}
+.picker {
+  color: white;
+}
+.province-picker {
+  width: 15%;
+  overflow: hidden;
+  vertical-align: center;
+  text-align: center;
+}
+.search-icon {
+  background-color: transparent;
+  color: white;
+  float: left;
+  overflow: hidden;
+  margin: 0px 5px;
+}
+.search-input {
+  background-color: transparent;
+  z-index: 6;
+  float: left;
+}
+.search-input-text {
+  color: white;
+  font-size: 0.9em;
+}
+.search-input-container {
+  overflow: hidden;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 15px;
+  width: 60%;
+  vertical-align: center;
+}

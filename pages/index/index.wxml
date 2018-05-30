@@ -1,4 +1,18 @@
+
  <view class="haibao">
+   <form>
+     <view class="toolbar">
+       <picker bindchange="bindPickerChange" value="{{provinceIndex}}" range="{{provinces}}" class="toolbar-widget province-picker">
+         <view class="picker">
+           {{provinces[provinceIndex]}}▾
+         </view>
+       </picker>
+       <view class="toolbar-widget search-input-container">
+         <view class="search-icon"><icon type="search" size="14" color="white"/></view>
+         <input placeholder='输入商家或商品名称' class="search-input search-input-text" placeholder-class="search-input-text"/>
+       </view>
+     </view>
+   </form>
    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
      <block wx:for="{{imgUrls}}">
         <swiper-item>
