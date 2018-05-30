@@ -1,1 +1,94 @@
-/* pages/me/me.wxss */
+/* pages/personnel/personnel.wxss */
+
+.query-box {
+  margin-top: -40rpx;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.extension {
+  margin-bottom: 0;
+}
+
+.extension-item text {
+  color: black;
+}
+
+.personnel-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.personnel-item image {
+  margin: 25rpx;
+  height: 50rpx;
+  width: 55rpx;
+}
+
+.personnel-descript {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+
+.personnel-descript text {
+  font-weight: 150;
+  font-size: 15px;
+}
+
+.personnel-descript text.action {
+  font-size: 33rpx;
+  color: #5194e6;
+  margin: 30rpx;
+}
+
+.personnel-descript text.action::after {
+  content: " >";
+  color: #cacaca;
+  padding-left: 20rpx;
+}
+
+.bg {
+  padding-bottom: 107rpx;
+}
+
+.shadow {
+  background: url("../../images/shadow.png") no-repeat;
+  background-size: contain;
+}
+.page-top{
+  display: flex;
+   flex-direction: row;
+}
+.image-top {
+  /* width: 100%; */
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  margin: 20px;
+  /* filter: blur(10rpx); */
+}
+.image-sex{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.nickname-text{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 20px;
+font-size: 35px;
+max-width: 150px;
+word-break:break-all;
+font-weight: 200;
+}
+.header {
+  margin-top: -150rpx;
+  background-color: #fff;
+}

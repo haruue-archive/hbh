@@ -1,6 +1,9 @@
 // pages/me/me.js
 Page({
-  data:{},
+  data:{
+    sex:0,
+    Nickname:"test name"
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
