@@ -12,21 +12,21 @@
 
 
   <view class="personnel-item" style="box-shadow:0rpx -20rpx 50rpx 0rpx #eee;margin-bottom:20rpx;">
-    <image src="../../images/icon/treasure.png"></image>
+    <image src="../../images/icon/personal.png"></image>
     <view class="personnel-descript" style="border:none;">
       <text>我的基本信息</text>
       <!-- <text class="action">领取加速包</text> -->
     </view>
   </view>
   <view class="personnel-item">
-    <image src="../../images/icon/trip.png"></image>
+    <image src="../../images/icon/auth.png"></image>
     <view class="personnel-descript">
       <text>诚信认证</text>
       <!-- <text class="action">正晚点/时刻表</text> -->
     </view>
   </view>
   <view class="personnel-item">
-    <image src="../../images/icon/invite.png"></image>
+    <image src="../../images/icon/ablum.png"></image>
     <view class="personnel-descript">
       <text>个人相册</text>
       <!-- <text class="action">一起来抢票</text> -->
