@@ -1,19 +1,24 @@
-// pages/community/community.js
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  data: {
+    currentTab:0,
+    flag:0
   },
-  onReady:function(){
-    // 页面渲染完成
+  switchNav: function(e){
+    console.log(e);
+    var page = this;
+    var id = e.target.id;
+    if (this.data.currentTab == id) {
+      return false;
+    } else {
+      page.setData({currentTab: id});
+    }
+    page.setData({flag: id});
   },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
+  onShareAppMessage: function () {
+    return {
+      title: '糗事百科',
+      desc: '这里有搞笑的娱乐段子',
+      path: '/index/index'
+    }
   }
 })

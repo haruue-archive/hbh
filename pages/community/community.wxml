@@ -1,2 +1,19 @@
-<!--pages/community/community.wxml-->
-<text>pages/community/community.wxml</text>
+<view class="bg">
+  <view class="nav">
+    <scroll-view class="scroll-view_H" scroll-x="true" >
+      <view class="scroll-view_H">
+        <view><view class="{{flag==0?'select':'normal'}}" id="0" bindtap="switchNav">爱情故事</view></view>
+        <view><view class="{{flag==1?'select':'normal'}}" id="1" bindtap="switchNav">婚庆视频</view></view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="add">+</view>
+</view>
+<swiper current="{{currentTab}}"style="height:1500px">
+  <swiper-item>
+    <include src="vip.wxml"/>
+  </swiper-item>
+  <swiper-item>
+    <include src="video.wxml"/>
+  </swiper-item>
+</swiper>
