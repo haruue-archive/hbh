@@ -87,5 +87,11 @@ Page({
     nav9.name = '全部分类';
     navs[9] = nav9;
     return navs;
+  },
+  onProvincePickerChange: function(e) {
+    console.log(e);
+    this.setData({
+      provinceIndex: e.detail.value
+    });
   }
 })

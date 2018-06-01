@@ -2,7 +2,7 @@
  <view class="haibao">
    <form>
      <view class="toolbar">
-       <picker bindchange="bindPickerChange" value="{{provinceIndex}}" range="{{provinces}}" class="toolbar-widget province-picker">
+       <picker bindchange="onProvincePickerChange" value="{{provinceIndex}}" range="{{provinces}}" class="toolbar-widget province-picker">
          <view class="picker">
            {{provinces[provinceIndex]}}▾
          </view>
