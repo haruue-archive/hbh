@@ -4,7 +4,8 @@ function initSubMenuDisplay(){
 Page({
   data:{
      subMenuDispaly:initSubMenuDisplay(),
-     currentTab:-1
+     currentTab:-1,
+     isSelectA: [true, false, false, false, false, false, false, false, false, false]
   },
    tapMainMenu:function(e){
      console.log(e);
@@ -19,5 +20,23 @@ Page({
           this.setData({currentTab:-1});
      }
      this.setData({subMenuDispaly:newSubMenuDisplay});
-  }
+  },
+   selectAItem: function (e) {
+     console.log(e.currentTarget.dataset.index);
+     var index = e.currentTarget.dataset.index;
+     var array=this.data.isSelectA;
+     for(var i=0;i<=9;i++){
+       if(i==index){
+         array[i]=true;
+       }else{
+         array[i]=false;
+       }
+     }
+     var i = parseInt(e.currentTarget.dataset.index);
+     var newSubMenuDisplay = initSubMenuDisplay();
+     newSubMenuDisplay[0]='hidden'
+     this.setData({isSelectA:array,
+     currentTab:-1});
+     this.setData({ subMenuDispaly: newSubMenuDisplay });
+   }
 })

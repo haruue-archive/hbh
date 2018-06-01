@@ -2,16 +2,16 @@
      <dt data-index="0" bindtap="tapMainMenu" class="{{currentTab==0?'select':'defalut'}}">全部</dt>
      <dd class="{{subMenuDispaly[0]}}">
          <ul>
-           <li class="select">全部</li>
-           <li>定喜宴</li>
-           <li>拍婚照</li>
-           <li>找婚庆</li>
-           <li>订婚戒</li>
-           <li>选婚纱</li>
-           <li>淘婚品</li>
-           <li>度蜜月</li>
-           <li>美新娘</li>
-           <li>拍写真</li>
+           <li data-index="0" class="{{isSelectA[0]?'select':'unSelect'}}" bindtap="selectAItem">全部</li>
+           <li data-index="1" class="{{isSelectA[1]?'select':'unSelect'}}" bindtap="selectAItem">定喜宴</li>
+           <li data-index="2" class="{{isSelectA[2]?'select':'unSelect'}}" bindtap="selectAItem">拍婚照</li>
+           <li data-index="3" class="{{isSelectA[3]?'select':'unSelect'}}" bindtap="selectAItem">找婚庆</li>
+           <li data-index="4" class="{{isSelectA[4]?'select':'unSelect'}}" bindtap="selectAItem">订婚戒</li>
+           <li data-index="5" class="{{isSelectA[5]?'select':'unSelect'}}" bindtap="selectAItem">选婚纱</li>
+           <li data-index="6" class="{{isSelectA[6]?'select':'unSelect'}}" bindtap="selectAItem">淘婚品</li>
+           <li data-index="7" class="{{isSelectA[7]?'select':'unSelect'}}" bindtap="selectAItem">度蜜月</li>
+           <li data-index="8" class="{{isSelectA[8]?'select':'unSelect'}}" bindtap="selectAItem">美新娘</li>
+           <li data-index="9" class="{{isSelectA[9]?'select':'unSelect'}}" bindtap="selectAItem">拍写真</li>
          </ul>
      </dd>
      <dt data-index="1" bindtap="tapMainMenu" class="{{currentTab==1?'select':'defalut'}}">默认</dt>
