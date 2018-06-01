@@ -1,110 +1,44 @@
-  <dl class="menu">
-     <dt data-index="0" bindtap="tapMainMenu" class="{{currentTab==0?'select':'defalut'}}">全部</dt>
-     <dd class="{{subMenuDispaly[0]}}">
-         <ul>
-           <li data-index="0" class="{{isSelectA[0]?'select':'unSelect'}}" bindtap="selectAItem">全部</li>
-           <li data-index="1" class="{{isSelectA[1]?'select':'unSelect'}}" bindtap="selectAItem">定喜宴</li>
-           <li data-index="2" class="{{isSelectA[2]?'select':'unSelect'}}" bindtap="selectAItem">拍婚照</li>
-           <li data-index="3" class="{{isSelectA[3]?'select':'unSelect'}}" bindtap="selectAItem">找婚庆</li>
-           <li data-index="4" class="{{isSelectA[4]?'select':'unSelect'}}" bindtap="selectAItem">订婚戒</li>
-           <li data-index="5" class="{{isSelectA[5]?'select':'unSelect'}}" bindtap="selectAItem">选婚纱</li>
-           <li data-index="6" class="{{isSelectA[6]?'select':'unSelect'}}" bindtap="selectAItem">淘婚品</li>
-           <li data-index="7" class="{{isSelectA[7]?'select':'unSelect'}}" bindtap="selectAItem">度蜜月</li>
-           <li data-index="8" class="{{isSelectA[8]?'select':'unSelect'}}" bindtap="selectAItem">美新娘</li>
-           <li data-index="9" class="{{isSelectA[9]?'select':'unSelect'}}" bindtap="selectAItem">拍写真</li>
-         </ul>
-     </dd>
-     <dt data-index="1" bindtap="tapMainMenu" class="{{currentTab==1?'select':'defalut'}}">默认</dt>
-     <dd class="{{subMenuDispaly[1]}}">
-         <ul>
-           <li class="select">默认</li>
-           <li>最新</li>
-           <li>最热</li>
-         </ul>
-     </dd>
-  </dl>
-  <view class="items">
-     <view class="item">
-        <view><image src="../../images/cash/shl.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-               施华洛婚纱摄影<text class="apply">已有4人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥200-300</view>
-        </view>
-     </view>
-     <view class="line"></view>
+<dl class="menu">
+  <dt data-index="0" bindtap="tapMainMenu" class="{{currentTab==0?'select':'defalut'}}">{{MenuTitle[0]}}</dt>
+  <dd class="{{subMenuDispaly[0]}}">
+    <ul>
+      <li data-index="0" class="{{isSelectA[0]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][0]}}</li>
+      <li data-index="1" class="{{isSelectA[1]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][1]}}</li>
+      <li data-index="2" class="{{isSelectA[2]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][2]}}</li>
+      <li data-index="3" class="{{isSelectA[3]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][3]}}</li>
+      <li data-index="4" class="{{isSelectA[4]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][4]}}</li>
+      <li data-index="5" class="{{isSelectA[5]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][5]}}</li>
+      <li data-index="6" class="{{isSelectA[6]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][6]}}</li>
+      <li data-index="7" class="{{isSelectA[7]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][7]}}</li>
+      <li data-index="8" class="{{isSelectA[8]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][8]}}</li>
+      <li data-index="9" class="{{isSelectA[9]?'select':'unSelect'}}" bindtap="selectAItem">{{titleArray[0][9]}}</li>
+    </ul>
+  </dd>
+  <dt data-index="1" bindtap="tapMainMenu" class="{{currentTab==1?'select':'defalut'}}">{{MenuTitle[1]}}</dt>
+  <dd class="{{subMenuDispaly[1]}}">
+    <ul>
+      <li data-index="0" class="{{isSelectB[0]?'select':'unSelect'}}" bindtap="selectBItem">{{titleArray[1][0]}}</li>
+      <li data-index="1" class="{{isSelectB[1]?'select':'unSelect'}}" bindtap="selectBItem">{{titleArray[1][1]}}</li>
+      <li data-index="2" class="{{isSelectB[2]?'select':'unSelect'}}" bindtap="selectBItem">{{titleArray[1][2]}}</li>
+    </ul>
+  </dd>
+</dl>
+<view class="items" wx:for="{{array}}">
 
-     <view class="item">
-        <view><image src="../../images/cash/fsl.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-               枫树林高端婚礼<text class="apply">已有14人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥100</view>
-        </view>
-     </view>
-     <view class="line"></view>
-
-     <view class="item">
-        <view><image src="../../images/cash/hjls.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-            花嫁丽舍一站式<text class="apply">已有129人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥1000</view>
-        </view>
-     </view>
-     <view class="line"></view>
-
-     <view class="item">
-        <view><image src="../../images/cash/sese.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-               SeSe婚礼国王<text class="apply">已有117人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥100</view>
-        </view>
-     </view>
-     <view class="line"></view>
-
-     <view class="item">
-        <view><image src="../../images/cash/wly.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-               婚宴定制酒<text class="apply">已有4人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥100</view>
-        </view>
-     </view>
-     <view class="line"></view>
-
-     <view class="item">
-        <view><image src="../../images/cash/spl.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-               诗普琳珠宝<text class="apply">已有45人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥100</view>
-        </view>
-     </view>
-     <view class="line"></view>
-
-     <view class="item">
-        <view><image src="../../images/cash/cym.jpg" style="width:93px;height:73px;"></image></view>
-        <view class="des">
-           <view class="title">
-               朝阳门私属婚礼空间<text class="apply">已有3人申请</text>
-           </view>
-           <view class="hr"></view>
-           <view class="price">￥800</view>
-        </view>
-     </view>
-     <view class="line"></view>
+  <view class="item">
+    <view>
+      <image src="{{item.image}}" style="width:93px;height:73px;"></image>
+    </view>
+    <view class="des">
+      <view class="title">
+        {{item.title}}
+        <text class="apply">{{item.applyPerson}}</text>
+      </view>
+      <view class="hr"></view>
+      <view class="price">{{item.price}}</view>
+    </view>
   </view>
+  <view class="line"></view>
+
+
+</view>
