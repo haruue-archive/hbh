@@ -46,6 +46,7 @@ Page({
         price: "￥800"
       }
     ],
+    sortResult:[[],[]],
     testResult: [[
       {
         image: '../../images/cash/wly.jpg',
@@ -154,13 +155,15 @@ Page({
       currentTab: -1,
       subMenuDispaly: newSubMenuDisplay
     });
+    //代替网络请求数据
+    var a;
     if (index>0) {
-      var a = this.data.testResult[index-1];
-      this.setData({array:a});
+      a = this.data.testResult[index-1];
     }else if(index==0){
-      var a = this.data.allResult;
-      this.setData({array:a});
+       a = this.data.allResult;
     }
+    this.setData({ array: a });
+    
   },
   selectBItem: function (e) {
     var index = e.currentTarget.dataset.index;
@@ -180,5 +183,13 @@ Page({
       currentTab: -1,
       subMenuDispaly: newSubMenuDisplay
     });
+    //代替网络请求数据
+    var a
+    if(index>0){
+     a =this.data.sortResult[index-1];
+    }else{
+      a=this.data.allResutl;
+    }
+    this.setData({array:a});
   }
 })
