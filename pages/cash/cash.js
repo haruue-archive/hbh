@@ -7,7 +7,9 @@ Page({
     currentTab: -1,
     isSelectA: [true, false, false, false, false, false, false, false, false, false],
     isSelectB: [true, false, false],
-    array:[],
+    array: [],
+    MenuTitle: [],
+    titleArray: [["全部", "定喜宴", "拍婚照", "找婚庆", "订婚戒", "选婚纱", "淘婚品", "度蜜月", "拍写真", "美新娘"], ["默认", "最新", "最热"]],
     allResult: [
       {
         image: '../../images/cash/shl.jpg',
@@ -46,7 +48,7 @@ Page({
         price: "￥800"
       }
     ],
-    sortResult:[[],[]],
+    sortResult: [[], []],
     testResult: [[
       {
         image: '../../images/cash/wly.jpg',
@@ -115,12 +117,14 @@ Page({
       title: '枫树林高端婚礼',
       applyPerson: "已有14人申请",
       price: "￥100"
-    }], [], [],[],[],[],[]
+    }], [], [], [], [], [], []
     ]
   },
-  onLoad:function(e){
-    var a=this.data.allResult;
-    this.setData({array:a});
+  onLoad: function (e) {
+    var a = this.data.allResult;
+    this.setData({ array: a });
+    a = ["全部", "默认"];
+    this.setData({ MenuTitle: a });
   },
   tapMainMenu: function (e) {
     console.log(e);
@@ -157,13 +161,18 @@ Page({
     });
     //代替网络请求数据
     var a;
-    if (index>0) {
-      a = this.data.testResult[index-1];
-    }else if(index==0){
-       a = this.data.allResult;
+    var title = this.data.titleArray[0][index];
+    if (index > 0) {
+      a = this.data.testResult[index - 1];
+    } else if (index == 0) {
+      a = this.data.allResult;
     }
-    this.setData({ array: a });
-    
+    this.setData({
+      array: a,
+      MenuTitle: [title,
+        "默认"]
+    });
+
   },
   selectBItem: function (e) {
     var index = e.currentTarget.dataset.index;
@@ -185,11 +194,17 @@ Page({
     });
     //代替网络请求数据
     var a
-    if(index>0){
-     a =this.data.sortResult[index-1];
-    }else{
-      a=this.data.allResutl;
+    var title = this.data.titleArray[1][index];
+
+    if (index > 0) {
+      a = this.data.sortResult[index - 1];
+    } else {
+      a = this.data.allResult;
     }
-    this.setData({array:a});
+    this.setData({
+      array: a,
+      MenuTitle: ["全部",
+        title]
+    });
   }
 })
