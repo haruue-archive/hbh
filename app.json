@@ -5,7 +5,8 @@
     "pages/marry/marry",
     "pages/community/community",
     "pages/me/me",
-    "pages/type/type"
+    "pages/type/type",
+    "pages/success/success"
   ],
   "window": {
     "backgroundTextStyle":"light",

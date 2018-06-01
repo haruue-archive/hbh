@@ -22,5 +22,10 @@ Page({
   onTicketTypeSelect:function(e) {
     console.log(e);
     this.setData({ticketType: e.target.dataset.item})
+  },
+  onSubmit: function(e) {
+    wx.navigateTo({
+      url: '../success/success'
+    });
   }
 })

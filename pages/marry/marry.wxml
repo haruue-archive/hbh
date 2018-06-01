@@ -52,7 +52,7 @@
          <view class="name">获知渠道：</view>
          <view><button class="way" bindtap="selectWay">{{way}}</button></view>
       </view>
-      <button class="btn" form-type="submit">免费索票</button>
+      <button class="btn" bindtap="onSubmit" form-type="submit">免费索票</button>
   </form>
 </view>
 <view class="{{flag=='0'?'bg':'hideBg'}}">

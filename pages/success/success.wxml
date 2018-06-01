@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <icon type="success" size="60" class="success-icon"/>
+  <text>索票成功</text>
+</view>
