@@ -24,8 +24,10 @@ Page({
     this.setData({ticketType: e.target.dataset.item})
   },
   onSubmit: function(e) {
-    wx.navigateTo({
-      url: '../success/success'
-    });
+    setTimeout(() => {
+      wx.navigateTo({
+        url: '../success/success'
+      });
+    }, 300);
   }
 })
