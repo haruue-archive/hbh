@@ -114,7 +114,7 @@ Page({
       title: '枫树林高端婚礼',
       applyPerson: "已有14人申请",
       price: "￥100"
-    }], [], []
+    }], [], [],[],[],[],[]
     ]
   },
   onLoad:function(e){
@@ -154,7 +154,7 @@ Page({
       currentTab: -1,
       subMenuDispaly: newSubMenuDisplay
     });
-    if (index <=3&&index>0) {
+    if (index>0) {
       var a = this.data.testResult[index-1];
       this.setData({array:a});
     }else if(index==0){
