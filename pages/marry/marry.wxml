@@ -3,8 +3,8 @@
      <image src="../../images/marry/xuanchuan.jpg" style="width:100%;height:220px;"></image>
   </view>
   <view class="ticket">
-      <view class="first"><icon type="success"></icon>我第一次索票</view>
-      <view class="second"><icon type="success"></icon>我以前索过票</view>
+      <view class="ticket-radio" data-item="1" bindtap="onTicketTypeSelect" style="{{ticketType == '1' ? 'background-color: #D60210;color: #ffffff;' : ''}}"><icon type="success"></icon>我第一次索票</view>
+      <view class="ticket-radio" data-item="2" bindtap="onTicketTypeSelect" style="{{ticketType == '2' ? 'background-color: #D60210;color: #ffffff;' : ''}}"><icon type="success"></icon>我以前索过票</view>
   </view>
 
 <form bindsubmit="formSubmit">
